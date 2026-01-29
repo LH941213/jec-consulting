@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>株式会社Jecコンサルティング | 未来をデザインする、戦略的パートナー</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #001f3f;
+            --accent-color: #007bff;
+            --dark-bg: #0a0a0a;
+            --text-light: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+            background-color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, rgba(0,31,63,0.9), rgba(0,0,0,0.8)), 
+                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2070') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            letter-spacing: -2px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #ccc;
+        }
+
+        /* Glassmorphism Navbar */
+        .navbar {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: 0.3s;
+        }
+
+        .navbar-brand {
+            font-weight: 900;
+            color: #fff !important;
+            letter-spacing: 1px;
+        }
+
+        /* Section Titles */
+        .section-title {
+            position: relative;
+            padding-bottom: 20px;
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: var(--accent-color);
+        }
+
+        /* Service Cards */
+        .service-card {
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid #eee;
+            transition: all 0.4s ease;
+            height: 100%;
+            background: #fff;
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            background: var(--primary-color);
+            color: #fff;
+            border-color: var(--primary-color);
+        }
+
+        .service-card i {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: var(--dark-bg);
+            color: white;
+            padding: 100px 0;
+        }
+
+        .form-control {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: #fff;
+            padding: 15px;
+        }
+
+        .form-control:focus {
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+            border-color: var(--accent-color);
+            box-shadow: none;
+        }
+
+        .btn-custom {
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .btn-glow {
+            background: var(--accent-color);
+            color: #fff;
+            box-shadow: 0 0 20px rgba(0,123,255,0.4);
+        }
+
+        .btn-glow:hover {
+            transform: scale(1.05);
+            color: #fff;
+            box-shadow: 0 0 30px rgba(0,123,255,0.6);
+        }
+
+        footer {
+            padding: 50px 0;
+            background: #000;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">JEC CONSULTING</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container" data-aos="zoom-out" data-aos-duration="1500">
+            <h1>Beyond the Peak.</h1>
+            <p>株式会社Jecコンサルティングは、ビジネスの限界を超え、<br>次世代の成功を共創するプロフェッショナル集団です。</p>
+            <a href="#contact" class="btn btn-custom btn-glow">お問い合わせはこちら</a>
+        </div>
+    </section>
+
+    <section id="about" class="py-5 my-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="section-title text-start">私たちについて</h2>
+                    <p class="lead">私たちは単なるアドバイザーではありません。<br>お客様のビジョンを現実に変えるための「並走者」です。</p>
+                    <p>戦略策定からデジタル変革、組織開発まで、多角的な視点から企業の持続的な成長を支援します。Jecコンサルティングが提供するのは、一過性の解決策ではなく、未来を勝ち抜くための「構造」です。</p>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=2070" alt="Office" class="img-fluid rounded-4 shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">サービス内容</h2>
+                <p>業界の常識を塗り替える、独自のコンサルティングアプローチ。</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card text-center">
+                        <i class="bi bi-graph-up-arrow"></i>
+                        <h3>経営戦略支援</h3>
+                        <p>市場分析に基づいた勝てるシナリオを策定し、実行までを徹底サポートします。</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card text-center">
+                        <i class="bi bi-cpu"></i>
+                        <h3>DX推進</h3>
+                        <p>最新のAI・IT技術を駆使し、ビジネスモデルそのものをアップデートします。</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card text-center">
+                        <i class="bi bi-people"></i>
+                        <h3>組織・人事改革</h3>
+                        <p>個の力を最大化し、自律的に成長し続ける強い組織文化を構築します。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center" data-aos="fade-up">
+                    <h2 class="section-title">お問い合わせ</h2>
+                    <p class="mb-5">新時代のビジネスを、共に。お気軽にご相談ください。</p>
+                    <form action="contact.php" method="POST">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="お名前" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control" placeholder="メールアドレス" required>
+                            </div>
+                            <div class="col-12">
+                                <textarea class="form-control" rows="5" placeholder="ご相談内容" required></textarea>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <button type="submit" class="btn btn-custom btn-glow">メッセージを送信</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2026 株式会社Jecコンサルティング. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // AOSの初期化
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // スクロール時にナビゲーションバーの背景色を変更
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                document.querySelector('.navbar').style.background = 'rgba(0, 31, 63, 0.95)';
+            } else {
+                document.querySelector('.navbar').style.background = 'rgba(255, 255, 255, 0.1)';
+            }
+        });
+    </script>
+</body>
+</html>
